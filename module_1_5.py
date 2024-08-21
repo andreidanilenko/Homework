@@ -1,12 +1,4 @@
-immutable_var=tuple_=2024,True,'module'
-print(immutable_var)
-print('Immutable tuple: ',immutable_var)
-mutable_list=[2024,True,'module']
-mutable_list.append('Modified')
-print('Mutable list: ',(mutable_list))
-
-
-# food=['apple','coconut','banana']
+ # food=['apple','coconut','banana']
 # print(food)
 # print(food[0])
 # food[0]='peach'
@@ -53,5 +45,11 @@ print('Mutable list: ',(mutable_list))
 # tuple_=(1,2)*3
 # print(tuple_)
 
+immutable_var=tuple_=2024,True,'module'
+print(immutable_var)
+print('Immutable tuple: ',immutable_var)
 
+mutable_list=[2024,True,'module']
+mutable_list.append('Modified')
+print('Mutable list: ',(mutable_list))
 
