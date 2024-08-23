@@ -10,5 +10,5 @@ while count < len(my_list):
     if my_list[count]<0:
         break
 
-    print(count, my_list[count])
+    print(my_list[count])
     count=count+1
