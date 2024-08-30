@@ -2,7 +2,6 @@ def print_params(a=1, b='строка', c=True):
     print(a, b, c)
     print()
 
-
 print_params(1, 'строка', True)
 print_params()
 print_params(b=25)
