@@ -44,6 +44,16 @@ print('Введите пароль', result, 'во вторую вставку')
 if int(result) == get_passcode(n):
     print('Выход здесь!')
 
+
+    # random.randing (3,20)
+    # def generate_pairs(n):
+    #     pairs = []
+    #     for i in range(1, n):
+    #         for j in range(i + 1, n):
+    #             if n % (i + j) == 0:
+    #                 pairs.append((i, j))
+    # return pairs
+
 # Дополнительное практическое задание по модулю: "Основные операторы"
 #
 # Цель: Применить знания полученные в модуле, решив задачу повышенного уровня сложности
