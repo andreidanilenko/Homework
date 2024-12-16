@@ -1,22 +1,25 @@
 class Car():
-    def __init__(self, model: str, __vin: int, __numbers: str):
+    def __init__(self, model: str, vin: int, numbers: str):
         self.model = model
-        self.__vin = __vin          # __ - Уровень доступа private
-        self.__numbers = __numbers
-        self.__is_valid_vin()
-        self.__is_valid_numbers()
-    def __is_valid_vin(vin_number):
-        vin = vin_number.__vin
+        if self.__is_valid_vin(vin):
+            self.__vin = vin          # __ - Уровень доступа private
+            # VIN корректный, иначе вызовется исключение класса IncorrectVinNumber
+        if self.__is_valid_numbers(numbers):
+            self.__numbers = numbers
+            # номер корректный, иначе вызовется исключение класса IncorrectCarNumbers
+
+
+    def __is_valid_vin(self,vin):
         if not isinstance(vin, int):
             raise IncorrectVinNumber('Некорректный тип vin номер')
         if not 1000000 <= vin <= 9999999:
             raise IncorrectVinNumber('Неверный диапазон для vin номера')
         return True
-    def __is_valid_numbers(numbers):
-        if not isinstance(numbers.__numbers, str):
+    def __is_valid_numbers(self,numbers):
+        if not isinstance(numbers, str):
             raise IncorrectVinNumber('Некорректный тип данных для номеров')
-        if not len(numbers.__numbers) == 6:
-            raise IncorrectVinNumber('Некорректный тип данных для номеров')
+        if not len(numbers) != 6:
+            raise IncorrectVinNumber('Неверная длина номера')
         return True
 
 class IncorrectVinNumber(Exception):
@@ -52,6 +55,7 @@ except IncorrectCarNumbers as exc:
   print(exc.message)
 else:
   print(f'{third.model} успешно создан')
+
 
   # Домашнее задание по теме "Создание исключений"
 
